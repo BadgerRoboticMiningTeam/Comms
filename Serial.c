@@ -99,10 +99,10 @@ int main(int argc, char *argv[]) {
 
 
   while (1) {
-    gets(command);
+  
 
     //send 7 character greeting
-    write (fd, "hello!\n", 7);           
+    write (fd, "h", 1);           
 
     // sleep enough to transmit the 7 plus 
     usleep ((7 + 25) * 100);             
@@ -111,6 +111,7 @@ int main(int argc, char *argv[]) {
     char buf [100];
     // read up to 100 characters if ready to read
     int n = read (fd, buf, sizeof buf);  
+    printf("%s", n);
     }
   }
 
